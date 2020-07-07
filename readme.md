@@ -96,3 +96,25 @@ Virtual DOM은 리액트의 가장 큰 특징이다.
 1. JSX로 렌더링한다.
 2. Virtual DOM이 이전 Virtual DOM에서 찍어둔 Snapshot과 비교를 해서 바뀐 부분을 찾는다. 이 과정을 'diffing' 이라고 부름
 3. 그 바뀐 부분만 Real DOM에서 바꾸어준다.
+
+### src/* 스카폴딩
+
+```
+src/
+--/_actions
+--/_reducers
+--/components
+--/views/
+----/Footer
+----/LandingPage
+----/LoginPage
+----/NavBar
+----/RegisterPage
+--/App.js
+--/Config.js
+--/hoc
+--/utils
+```
+
+hoc : Higher Order Component의 약자로 nuxt/middleware랑 비슷한 역할
+
