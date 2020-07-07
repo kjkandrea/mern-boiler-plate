@@ -34,9 +34,7 @@ const userSchema = mongoose.Schema({
 })
 
 userSchema.pre('save', function (next) {
-  var user = this;
-
-  console.log(user)
+  var user = this; // this = userSchema
 
   // password가 변경된다면
   if(user.isModified('password')) {
@@ -54,6 +52,16 @@ userSchema.pre('save', function (next) {
     next()
   }
 })
+
+userSchema.methods.comparePassword = function(plainPassword, callback) {
+  // 패스워드와 암호화된 패스워드가 일치하는지 체크
+
+  // this = userSchema
+  bcrypt.compare(plainPassword, this.password, function(err, isMatch) {
+    if(err) return callback(err)
+    callback(null, isMatch)
+  });
+}
 
 const User = mongoose.model('User', userSchema)
 
