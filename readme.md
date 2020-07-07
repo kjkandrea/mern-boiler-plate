@@ -24,6 +24,15 @@ bcrypt.genSalt(saltRounds, function(err, salt) {
 });
 ```
 
+### jsonwebtoken
+
+[npm : jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+
+
+```
+npm install jsonwebtoken --save
+```
+
 ## 로그인 회원가입 플로우
 
 ### 회원가입 (/register)
@@ -41,3 +50,5 @@ bcrypt.genSalt(saltRounds, function(err, salt) {
 3. 비밀번호가 맞는 비밀번호 인지 확인한다. 이 부분에서 평문 비밀번호와 암호화된 비밀번호를 대조해보게 되는데, 암호를 복호화하여 대조하는 것이 아닌 bcrypt 모듈을 통해 대조한다.
    * 일치하지 않으면 실패를 반환한다.
    * 일치한다면 다음단계
+4. 비밀번호가 일치하면 토큰을 생성한다. 
+5. 생성된 토큰을 쿠키나 로컬스토리지에 저장한다.
