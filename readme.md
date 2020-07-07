@@ -72,6 +72,10 @@ npm install jsonwebtoken --save
 
 ### React
 
+```
+npx create-react-app .
+```
+
 #### Real DOM vs Virtual DOM
 
 Virtual DOM은 리액트의 가장 큰 특징이다.
