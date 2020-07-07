@@ -1,0 +1,26 @@
+{
+  "name": "mern-boiler-plate",
+  "version": "1.0.0",
+  "description": "my first boiler plate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjkandrea/mern-boiler-plate.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "andrea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjkandrea/mern-boiler-plate/issues"
+  },
+  "homepage": "https://github.com/kjkandrea/mern-boiler-plate#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
