@@ -18,7 +18,7 @@ mongoose.connect(masterKey.MongoDB.code, {
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello Nodemon!'))
 
 
 // 회원가입 라우트
