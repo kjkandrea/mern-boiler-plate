@@ -67,3 +67,28 @@ npm install jsonwebtoken --save
 
 1. auth 미들웨어에서 넣어준 _id 값으로 로그아웃 하려는 유저를 찾는다.
 2. 해당 유저의 토큰을 삭제한다.
+
+## client
+
+### React
+
+#### Real DOM vs Virtual DOM
+
+Virtual DOM은 리액트의 가장 큰 특징이다.
+
+##### Real DOM
+
+* 10개의 리스트가 있다.
+* 그 중 한가지 리스트만 Update 됨
+* 전체리스트를 다시 Reload 해야 함
+* 매우 비싼 작업
+
+##### Virtual DOM
+
+* 10개의 리스트가 있다.
+* 그 중 한가지 리스트만 Update 됨
+* 그 중 한가지 리스트만 바꾸어 준다.
+
+1. JSX로 렌더링한다.
+2. Virtual DOM이 이전 Virtual DOM에서 찍어둔 Snapshot과 비교를 해서 바뀐 부분을 찾는다. 이 과정을 'diffing' 이라고 부름
+3. 그 바뀐 부분만 Real DOM에서 바꾸어준다.
