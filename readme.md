@@ -62,3 +62,8 @@ npm install jsonwebtoken --save
   * 유저가 있으면 true
   * 유저가 없으면 false
 3. 고유 아이디가 일치하는 user row가 받아온 token을 가지고 있는지 확인한다.
+
+### 로그아웃 (/logout)
+
+1. auth 미들웨어에서 넣어준 _id 값으로 로그아웃 하려는 유저를 찾는다.
+2. 해당 유저의 토큰을 삭제한다.
