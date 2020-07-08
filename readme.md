@@ -155,5 +155,18 @@ module.exports = function(app) {
     })
   );
 };
+```
 
+#### concurrently
+
+```
+npm i concurrently --S
+```
+
+```
+// package.json
+"scripts": {
+    "backend": "nodemon ./server/index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+  },
 ```
