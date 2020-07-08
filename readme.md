@@ -163,10 +163,22 @@ module.exports = function(app) {
 npm i concurrently --S
 ```
 
-```
+``` json
 // package.json
 "scripts": {
     "backend": "nodemon ./server/index.js",
     "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
+```
+
+#### ant design
+
+```
+npm install antd --save
+```
+
+``` javascript
+// index.js
+
+import 'antd/dist/antd.css';
 ```
