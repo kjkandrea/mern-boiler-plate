@@ -26,6 +26,12 @@ mongoose.connect(config.mongoURI, {
 app.get('/', (req, res) => res.send('Hello!'))
 
 
+// 테스트 라우트
+
+app.get('/api/hello', (req, res) => {
+  res.send('안녕안녕')
+})
+
 // 회원가입 라우트
 
 app.post('/api/users/register', (req, res) => {

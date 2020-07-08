@@ -118,3 +118,42 @@ src/
 
 hoc : Higher Order Component의 약자로 nuxt/middleware랑 비슷한 역할
 
+#### react-router-dom
+
+```
+npm i react-router-dom -S
+```
+
+#### Axios
+
+```
+npm i axios -S
+```
+
+#### http-proxy-middleware
+
+```
+npm i http-proxy-middleware -S
+```
+
+src/setupProxy.js
+
+[Configuring the Proxy Manually](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually)
+
+``` javascript
+// src/setupProxy.js
+
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+
+module.exports = function(app) {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: 'http://localhost:5000',
+      changeOrigin: true,
+    })
+  );
+};
+
+```
