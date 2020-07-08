@@ -97,6 +97,8 @@ Virtual DOM은 리액트의 가장 큰 특징이다.
 2. Virtual DOM이 이전 Virtual DOM에서 찍어둔 Snapshot과 비교를 해서 바뀐 부분을 찾는다. 이 과정을 'diffing' 이라고 부름
 3. 그 바뀐 부분만 Real DOM에서 바꾸어준다.
 
+#### Props, State
+
 ### src/* 스카폴딩
 
 ```
@@ -182,3 +184,13 @@ npm install antd --save
 
 import 'antd/dist/antd.css';
 ```
+
+#### Redux 친구들
+
+```
+npm install redux react-redux redux-promise redux-thunk --save
+```
+
+##### redux-promise redux-thunk
+
+Promise, Fuctions 을 dispatch() 하게 해줌
